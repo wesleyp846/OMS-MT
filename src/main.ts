@@ -7,6 +7,13 @@ const nameForm = document.querySelector<HTMLFormElement>('#name-form')!;
 const nameInput = document.querySelector<HTMLInputElement>('#name-input')!;
 const submitButton = document.querySelector<HTMLButtonElement>('#submit-button')!;
 
+submitButton.addEventListener('click', (event) => {
+  // É uma boa prática usar o event.preventDefault() dentro do listener de um botão de formulário
+  event.preventDefault();
+  console.log('Botão clicado');
+  // Sua lógica aqui...
+});
+
 // O '!' no final é um "Non-null Assertion Operator". 
 // Ele diz: "TypeScript, eu tenho certeza que este elemento existe na página".
 // Usamos isso aqui porque sabemos que acabamos de criar os elementos no HTML.
